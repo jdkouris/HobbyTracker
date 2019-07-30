@@ -42,6 +42,12 @@ extension FriendsTableViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "FriendCell", for: indexPath) as? FriendTableViewCell else { return UITableViewCell() }
         
+        let friend = friends[indexPath.row]
+        
+        cell.nameLabel.text = friend.name
+        cell.hometownLabel.text = friend.hometown
+        cell.hobbyCountLabel.text = "\(friend.hobbies.count)"
+        
         return cell
     }
     
