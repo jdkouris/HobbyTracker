@@ -16,11 +16,9 @@ class FriendsTableViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        
+        tableView.dataSource = self
     }
     
-
     /*
     // MARK: - Navigation
 
@@ -32,6 +30,8 @@ class FriendsTableViewController: UIViewController {
     */
 
 }
+
+// MARK: - UITableViewDataSource
 
 extension FriendsTableViewController: UITableViewDataSource {
     
