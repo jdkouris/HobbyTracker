@@ -44,9 +44,7 @@ extension FriendsTableViewController: UITableViewDataSource {
         
         let friend = friends[indexPath.row]
         
-        cell.nameLabel.text = friend.name
-        cell.hometownLabel.text = friend.hometown
-        cell.hobbyCountLabel.text = "\(friend.hobbies.count)"
+        
         
         return cell
     }
