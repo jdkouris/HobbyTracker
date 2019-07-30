@@ -26,6 +26,11 @@ class FriendsTableViewController: UIViewController {
             if let addFriendVC = segue.destination as? AddFriendViewController {
                 addFriendVC.delegate = self
             }
+        } else if segue.identifier == "ShowFriendDetailSegue" {
+            if let indexPath = tableView.indexPathForSelectedRow,
+                let friendDetailVC = segue.destination as? FriendDetailViewController {
+                friendDetailVC.friend = friends[indexPath.row]
+            }
         }
     }
 

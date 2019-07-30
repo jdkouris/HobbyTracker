@@ -189,10 +189,10 @@
             </objects>
             <point key="canvasLocation" x="2845" y="-122"/>
         </scene>
-        <!--View Controller-->
+        <!--Friend Detail View Controller-->
         <scene sceneID="WYJ-p0-fAv">
             <objects>
-                <viewController id="ExG-A9-Rsg" sceneMemberID="viewController">
+                <viewController id="ExG-A9-Rsg" customClass="FriendDetailViewController" customModule="HobbyTracker" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="51z-hu-sK2">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -222,7 +222,7 @@
                                     <constraint firstAttribute="width" constant="150" id="rH9-uH-UlJ"/>
                                 </constraints>
                             </imageView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="List of hobbies" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="tL4-J9-MBd">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="tL4-J9-MBd">
                                 <rect key="frame" x="20" y="380" width="374" height="462"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -249,6 +249,11 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Vl4-rn-4cE"/>
                     </view>
+                    <connections>
+                        <outlet property="hobbiesTextView" destination="tL4-J9-MBd" id="1hR-Ao-ean"/>
+                        <outlet property="hometownLabel" destination="b1x-kc-kcu" id="IDe-wg-aWp"/>
+                        <outlet property="nameLabel" destination="Ghh-rW-Wfe" id="daD-sQ-29O"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4qh-Th-Kc1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
