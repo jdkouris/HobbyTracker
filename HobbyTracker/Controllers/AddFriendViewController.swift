@@ -30,6 +30,27 @@ class AddFriendViewController: UIViewController {
     
     @IBAction func saveTapped(_ sender: UIBarButtonItem) {
         
+        guard let name = nameTextField.text,
+            let hometown = hometownTextField.text,
+            !name.isEmpty,
+            !hometown.isEmpty else { return }
+        
+        var friend = Friend(name: name, hometown: hometown, hobbies: [])
+        
+        if let hobby1 = hobby1TextField.text, !hobby1.isEmpty {
+            friend.hobbies.append(hobby1)
+        }
+        
+        if let hobby2 = hobby2TextField.text, !hobby2.isEmpty {
+            friend.hobbies.append(hobby2)
+        }
+        
+        if let hobby3 = hobby3TextField.text, !hobby3.isEmpty {
+            friend.hobbies.append(hobby3)
+        }
+        
+        delegate?.friendWasCreated(friend)
+        
     }
     
     @IBAction func cancelTapped(_ sender: UIBarButtonItem) {
