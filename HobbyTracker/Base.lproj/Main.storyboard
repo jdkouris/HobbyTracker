@@ -13,7 +13,7 @@
         <!--Hobby Tracker-->
         <scene sceneID="djm-QW-blX">
             <objects>
-                <viewController id="92P-7y-xjk" sceneMemberID="viewController">
+                <viewController id="92P-7y-xjk" customClass="FriendsTableViewController" customModule="HobbyTracker" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="D4X-bl-YZA">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -22,7 +22,7 @@
                                 <rect key="frame" x="0.0" y="140" width="414" height="756"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="60" id="VnK-v2-A0F">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="FriendCell" rowHeight="60" id="VnK-v2-A0F">
                                         <rect key="frame" x="0.0" y="28" width="414" height="60"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="VnK-v2-A0F" id="7UH-8s-qDM">
@@ -61,7 +61,7 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <segue destination="ExG-A9-Rsg" kind="show" id="8WE-uX-m8i"/>
+                                            <segue destination="ExG-A9-Rsg" kind="show" identifier="ShowFriendDetailSegue" id="8WE-uX-m8i"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -79,10 +79,13 @@
                     <navigationItem key="navigationItem" title="Hobby Tracker" id="frY-1r-fYM">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="Lsp-M1-Gum">
                             <connections>
-                                <segue destination="X8p-Bl-dQi" kind="presentation" id="sQW-uZ-6gx"/>
+                                <segue destination="X8p-Bl-dQi" kind="presentation" identifier="AddFriendModalSegue" id="sQW-uZ-6gx"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="tableView" destination="BSP-O5-QZp" id="ITZ-1k-fhP"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YXA-5U-Nlg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
