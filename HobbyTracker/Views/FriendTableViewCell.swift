@@ -25,6 +25,6 @@ class FriendTableViewCell: UITableViewCell {
         
         nameLabel.text = friend.name
         hometownLabel.text = friend.hometown
-        hobbyCountLabel.text = "\(friend.hobbies.count)"
+        hobbyCountLabel.text = "\(friend.hobbies.count) hobbies"
     }
 }
