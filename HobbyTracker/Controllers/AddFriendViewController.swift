@@ -24,7 +24,6 @@ class AddFriendViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
         nameTextField.delegate = self
     }
     
@@ -76,7 +75,6 @@ extension AddFriendViewController: UITextFieldDelegate {
                 textField.resignFirstResponder()
             }
         }
-        
         return false
     }
     
