@@ -44,7 +44,7 @@ extension FriendsTableViewController: UITableViewDataSource {
         
         let friend = friends[indexPath.row]
         
-        
+        cell.friend = friend
         
         return cell
     }
