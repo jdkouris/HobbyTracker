@@ -22,10 +22,13 @@ class FriendDetailViewController: UIViewController {
     
     private func updateViews() {
         guard let friend = friend else { return }
+        
         nameLabel.text = friend.name
         hometownLabel.text = friend.hometown
+        
+        var hobbyText = ""
         for hobby in friend.hobbies {
-            hobbiesTextView.text.append(contentsOf: hobby)
+            hobbyText += "• \(hobby)\n"
         }
     }
 
