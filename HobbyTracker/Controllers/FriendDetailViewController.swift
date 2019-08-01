@@ -30,6 +30,7 @@ class FriendDetailViewController: UIViewController {
         for hobby in friend.hobbies {
             hobbyText += "• \(hobby)\n"
         }
+        hobbiesTextView.text = hobbyText
     }
 
 }
