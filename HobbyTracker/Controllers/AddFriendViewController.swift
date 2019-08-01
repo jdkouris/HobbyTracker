@@ -25,6 +25,10 @@ class AddFriendViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         nameTextField.delegate = self
+        hometownTextField.delegate = self
+        hobby1TextField.delegate = self
+        hobby2TextField.delegate = self
+        hobby3TextField.delegate = self
     }
     
     @IBAction func saveTapped(_ sender: UIBarButtonItem) {
